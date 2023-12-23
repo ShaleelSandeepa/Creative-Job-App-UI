@@ -313,7 +313,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.grey,
                             ),
                           ),
-                          trailing: Text(data.getJobData()[index].time),
+                          trailing: Text(
+                            data.getJobData()[index].time,
+                            style: const TextStyle(fontSize: 12),
+                          ),
                         ),
                       ),
                     );
