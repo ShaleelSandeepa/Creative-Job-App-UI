@@ -50,8 +50,8 @@ class JobCard extends StatelessWidget {
         elevation: 5,
         borderRadius: BorderRadius.circular(15),
         child: Container(
-          width: size.width * 0.65,
-          height: 150,
+          width: size.width * 0.7,
+          height: 160,
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: data.getJobData()[index].primary,
@@ -78,7 +78,7 @@ class JobCard extends StatelessWidget {
                     style: GoogleFonts.ubuntu(
                       color: data.getJobData()[index].secondary,
                       fontWeight: FontWeight.bold,
-                      fontSize: 17,
+                      fontSize: 16,
                     ),
                   ),
                   const Spacer(),
@@ -95,7 +95,7 @@ class JobCard extends StatelessWidget {
                     style: const TextStyle(
                       color: Colors.grey,
                       fontWeight: FontWeight.w400,
-                      fontSize: 16,
+                      fontSize: 15,
                     ),
                   ),
                   const SizedBox(
@@ -143,14 +143,14 @@ class JobCard extends StatelessWidget {
                         data.getJobData()[index].companyName,
                         style: GoogleFonts.ubuntu(
                             color: Colors.grey,
-                            fontSize: 17,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         data.getJobData()[index].city,
                         style: GoogleFonts.ubuntu(
                             color: Colors.grey,
-                            fontSize: 15,
+                            fontSize: 14,
                             fontWeight: FontWeight.w400),
                       ),
                     ],
@@ -160,7 +160,7 @@ class JobCard extends StatelessWidget {
                     data.getJobData()[index].time,
                     style: GoogleFonts.ubuntu(
                       color: Colors.red,
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

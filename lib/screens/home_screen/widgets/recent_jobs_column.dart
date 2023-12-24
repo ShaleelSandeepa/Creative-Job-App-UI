@@ -19,41 +19,43 @@ class RecentJobsColumn extends StatelessWidget {
           padding: const EdgeInsets.all(5.0),
           child: Container(
             width: size.width,
-            height: 70,
+            height: 80,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: ListTile(
-              leading: Container(
-                width: 50,
-                height: 50,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 1.5,
-                    ),
-                    color: data.getJobData()[index].primary,
-                    borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
-                      image: NetworkImage(data.getJobData()[index].logo),
-                      fit: BoxFit.cover,
-                    )),
-              ),
-              title: Text(
-                data.getJobData()[index].title,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text(
-                "${data.getJobData()[index].companyName} - ${data.getJobData()[index].type}",
-                style: const TextStyle(
-                  color: Colors.grey,
+            child: Center(
+              child: ListTile(
+                leading: Container(
+                  width: 50,
+                  height: 50,
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 1.5,
+                      ),
+                      color: data.getJobData()[index].primary,
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                        image: NetworkImage(data.getJobData()[index].logo),
+                        fit: BoxFit.cover,
+                      )),
                 ),
-              ),
-              trailing: Text(
-                data.getJobData()[index].time,
-                style: const TextStyle(fontSize: 12),
+                title: Text(
+                  data.getJobData()[index].title,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                subtitle: Text(
+                  "${data.getJobData()[index].companyName} - ${data.getJobData()[index].type}",
+                  style: const TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+                trailing: Text(
+                  data.getJobData()[index].time,
+                  style: const TextStyle(fontSize: 12),
+                ),
               ),
             ),
           ),

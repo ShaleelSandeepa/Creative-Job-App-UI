@@ -43,6 +43,7 @@ class CustomAppBar extends StatelessWidget {
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: Colors.white, // Set a default color for the text
+                    height: 0.8,
                   ),
                 ),
               ),
