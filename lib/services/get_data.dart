@@ -22,6 +22,18 @@ class GetData {
         time: "7 Days Left",
         primary: Colors.black,
         secondary: Colors.white,
+        descriptionList: [
+          "3+ years of experience with Automation framework development using Open-Source Tools like Selenium.",
+          "Proficiency in at least one of the programing languages preferably Java/Java Script.",
+          "Good understanding of Dev-ops/Cloud CI&CD concepts and tools like Jenkins.",
+        ],
+        companyList: [
+          "To interact with the customer and internal teams to gather requirements for development purposes.",
+          "To maintain existing features, troubleshoot bugs, resolve ad-hoc requests and provide support for enhancement (major and minor) or new developments based on business or client requirements as well as from the functional and technical team of HCL on the project. ",
+          "To perform activities related to enhancement creation of documents for CMMi and client requirements. ",
+          "To provide technical guidance to junior developers."
+        ],
+        reviewList: [],
       ),
       JobModel(
         title: "Senior Mobile Developer",
