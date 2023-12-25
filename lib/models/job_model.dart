@@ -10,6 +10,9 @@ class JobModel {
   String time;
   Color primary;
   Color secondary;
+  List<String> descriptionList;
+  List<String> companyList;
+  List<String> reviewList;
 
   JobModel({
     required this.title,
@@ -21,5 +24,8 @@ class JobModel {
     required this.time,
     required this.primary,
     required this.secondary,
+    this.descriptionList = const [],
+    this.companyList = const [],
+    this.reviewList = const [],
   });
 }

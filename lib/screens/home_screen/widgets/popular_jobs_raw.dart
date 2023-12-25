@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:job_app_ui/screens/job_view/job_view_screen.dart';
 import 'package:job_app_ui/services/get_data.dart';
 
 class PupularJobsRaw extends StatelessWidget {
@@ -19,10 +20,20 @@ class PupularJobsRaw extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       child: Row(
         children: List.generate(data.getJobData().length, (index) {
-          return JobCard(
-            size: size,
-            data: data,
-            index: index,
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        JobViewScreen(model: data.getJobData()[index]),
+                  ));
+            },
+            child: JobCard(
+              size: size,
+              data: data,
+              index: index,
+            ),
           );
         }),
       ),
@@ -45,7 +56,7 @@ class JobCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10, right: 5),
       child: Material(
         elevation: 5,
         borderRadius: BorderRadius.circular(15),

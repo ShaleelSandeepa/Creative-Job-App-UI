@@ -22,44 +22,41 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const CustomAppBar(),
-                const SizedBox(
-                  height: 15,
-                ),
-                const GreetingBar(),
-                const SizedBox(
-                  height: 20,
-                ),
-                CustomSearchBar(size: size),
-                const SizedBox(
-                  height: 20,
-                ),
-                const CategoryBar(
-                  title: 'Pupular Jobs',
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                PupularJobsRaw(data: data, size: size),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CategoryBar(
-                  title: 'Recent Jobs',
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                RecentJobsColumn(data: data, size: size),
-              ],
-            ),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const CustomAppBar(),
+              const SizedBox(
+                height: 15,
+              ),
+              const GreetingBar(),
+              const SizedBox(
+                height: 20,
+              ),
+              CustomSearchBar(size: size),
+              const SizedBox(
+                height: 20,
+              ),
+              const CategoryBar(
+                title: 'Pupular Jobs',
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              PupularJobsRaw(data: data, size: size),
+              const SizedBox(
+                height: 15,
+              ),
+              const CategoryBar(
+                title: 'Recent Jobs',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              RecentJobsColumn(data: data, size: size),
+            ],
           ),
         ),
       ),
